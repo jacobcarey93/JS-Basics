@@ -6,6 +6,14 @@ var name = 'Tyler';
 
   //Code Here
 
+  function isTyler(name) {
+    if (name === 'Tyler') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 //////////////////PROBLEM 2////////////////////
 
 
@@ -13,6 +21,10 @@ var name = 'Tyler';
 
 
   //Code Here
+
+function getName() {
+  return prompt("What is your name?");
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -23,6 +35,11 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+function welcome() {
+  alert('Welcome, ' + getName());
+}
+
+
 
 
 //////////////////PROBLEM 4////////////////////
@@ -34,6 +51,9 @@ var name = 'Tyler';
 
   //Answer Here
 
+  // parameters are the variables which are part of a functions declaration
+  // argumets are expressions used when calling a function. 
+
 
 //////////////////PROBLEM 5////////////////////
 
@@ -43,7 +63,7 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+// null, Nan, undefined, false, 0, " "
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,14 +73,18 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+  var myName = () => 'Jacob';
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
 
+  var newMyName = myName;
+
 //Now alert the result of invoking newMyName
+
+alert(myName());
 
 
 
@@ -72,8 +96,16 @@ var name = 'Tyler';
 
   //Code Here
 
+  var outerFn = () => {
+    return () => 'Jacob'
+  };
+
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
 
+var innerFn = outerFn();
+
 //Now invoke innerFn.
+
+innerFn();
